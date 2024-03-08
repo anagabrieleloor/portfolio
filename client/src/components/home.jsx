@@ -30,11 +30,11 @@ export default function Home() {
   return (
     <div>
 
-<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container aos-init aos-animate" data-aos="fade-in">
+<section id="hero" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+    <div className="hero-container aos-init aos-animate" data-aos="fade-in">
       <h1>Anagabriele Loor</h1>
       <p><span className="typed">{typedText}</span>
-      <span class="typed-cursor" aria-hidden="true">|</span></p>
+      <span className="typed-cursor" aria-hidden="true">|</span></p>
     </div>
   </section>
     </div>
