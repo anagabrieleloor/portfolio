@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState, useEffect } from 'react';
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import Navbar from './components/navbar';
+import Home from './components/home';
+import Contact from './components/contact';
+import Portfolio from './components/portfolio';
 
 function App() {
 
@@ -12,22 +13,18 @@ function App() {
     <>
       <div>
         <Navbar />
-        <a href="https://wallpapers-clan.com/wp-content/uploads/2022/07/kuromi-pfp-3.jpg" target="_blank">
-          <img src="https://wallpapers-clan.com/wp-content/uploads/2022/07/kuromi-pfp-3.jpg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://i.pinimg.com/736x/9e/83/5f/9e835fe6c6bd15f1b8e62988df7ba562.jpg" target="_blank">
-          <img src="https://i.pinimg.com/736x/9e/83/5f/9e835fe6c6bd15f1b8e62988df7ba562.jpg" className="logo react" alt="React logo" />
-        </a>
-      </div>
+
       <Routes>
         <Route>
-          <Route path="/" element={<home />} />
-          <Route path="/portfolio" element={<portfolio />} />
-          <Route path="/contact" element={<contact />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
-      <h1>ani portfolio x3</h1>
+      
+      
     
+  </div>
     </>
   )
 }

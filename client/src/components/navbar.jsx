@@ -30,10 +30,6 @@ export default function Navbar() {
   </header>
 
 
-      <Link to="/">Home</Link>
-      <Link to="/portfolio">Portfolio</Link>
-      <Link to="/contact">Contact</Link>
-      hello from navbar
     </div>
   );
 }
