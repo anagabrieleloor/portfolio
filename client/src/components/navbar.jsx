@@ -1,4 +1,5 @@
 import {Routes, Route, Link} from "react-router-dom";
+import profpic from '../assets/profpic.jpg'; 
 
 export default function Navbar() {
   return (
@@ -7,7 +8,7 @@ export default function Navbar() {
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="https://wallpapercave.com/uwp/uwp925343.jpeg" alt="Profile Picture" class="img-fluid rounded-circle" />
+      <img src={profpic} alt="Profile Picture" className="img-fluid rounded-circle" />
         <h1 class="text-light"><a href="index.html">Anagabriele Loor</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>

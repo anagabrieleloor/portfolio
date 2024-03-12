@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import Home from './components/home';
 import Contact from './components/contact';
 import Portfolio from './components/portfolio';
+import BinderBuddies from './components/binderbuddies';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/binderbuddies" element={<BinderBuddies />} />
         </Route>
       </Routes>
       
