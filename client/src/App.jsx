@@ -6,6 +6,7 @@ import Home from './components/home';
 import Contact from './components/contact';
 import Portfolio from './components/portfolio';
 import BinderBuddies from './components/binderbuddies';
+import About from './components/about';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/binderbuddies" element={<BinderBuddies />} />
+          <Route path="/about" element={<About />} />
         </Route>
       </Routes>
       

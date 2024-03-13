@@ -36,67 +36,56 @@ export default function BinderBuddies() {
     <div>
       <section id="portfolio-details" className="portfolio-details">
         <div className="container">
-
           <div className="row gy-4">
-
             <div className="col-lg-8">
-              {/* <!-- Slideshow container --> */}
+              {/* Slideshow container */}
               <div className="slideshow-container">
-
-                {/* <!-- Full-width images with number and caption text --> */}
+                {/* Full-width images with number and caption text */}
                 <div className="mySlides fade">
                   <div className="numbertext">1 / 3</div>
-                  <img src="https://i.ibb.co/hV56nfW/Screenshot-2024-03-12-114933.png" style={{ width: '100%' }} />
+                  <img src="https://i.ibb.co/hV56nfW/Screenshot-2024-03-12-114933.png" style={{ width: '100%' }} alt="User Dashboard" />
                   <div className="text">User Dashboard</div>
                 </div>
-
                 <div className="mySlides fade">
                   <div className="numbertext">2 / 3</div>
-                  <img src="https://i.ibb.co/W0sTJ4j/buddyprof.png" style={{ width: '100%' }} />
+                  <img src="https://i.ibb.co/W0sTJ4j/buddyprof.png" style={{ width: '100%' }} alt="Buddy Profile" />
                   <div className="text">Buddy Profile</div>
                 </div>
-
                 <div className="mySlides fade">
                   <div className="numbertext">3 / 3</div>
-                  <img src="https://i.ibb.co/fGMsKP2/events.png" style={{ width: '100%' }} />
+                  <img src="https://i.ibb.co/fGMsKP2/events.png" style={{ width: '100%' }} alt="Study Events" />
                   <div className="text">Study Events</div>
                 </div>
-                {/* 
-  <!-- Next and previous buttons --> */}
+                {/* Next and previous buttons */}
                 <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
                 <a className="next" onClick={() => plusSlides(1)}>&#10095;</a>
               </div>
               <br />
-
-              {/* <!-- The dots/circles --> */}
+              {/* The dots/circles */}
               <div style={{ textAlign: 'center' }}>
                 <span className="dot" onClick={() => currentSlide(1)}></span>
                 <span className="dot" onClick={() => currentSlide(2)}></span>
                 <span className="dot" onClick={() => currentSlide(3)}></span>
               </div>
-
-              <div className="col-lg-4">
-                <div className="portfolio-info">
-                  <h3>Binder Buddies</h3>
-                  <ul>
-                    <li><strong>Tech Stack</strong>: PostgreSQL, Exress.js, React, Node.js</li>
-                    <li><strong>Github Repo</strong>: <a href="https://github.com/Capstone-Project-Study-Partner-App/Study-App">Github Repo</a></li>
-                    <li><strong>Demo Video</strong>: <a href="https://www.youtube.com/watch?v=YGEWnMaVCJQ">App Walk Through</a></li>
-                    <li><strong>Deployed Site</strong>: <a href="https://binderbuddies-03bu.onrender.com/">Binder Buddies</a></li>
-                  </ul>
-                </div>
-                <div className="portfolio-description">
-                  <h2>This is an example of a portfolio detail</h2>
-                  <p>
-                    Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-                  </p>
-                </div>
-              </div>
-
             </div>
-
+            <div className="col-lg-4">
+              <div className="portfolio-info">
+                <h3>Binder Buddies</h3>
+                <ul>
+                  <li><strong>Tech Stack</strong>: PostgreSQL, Express.js, React, Node.js</li>
+                  <li><strong>Github Repo</strong>: <a href="https://github.com/Capstone-Project-Study-Partner-App/Study-App">Github Repo</a></li>
+                  <li><strong>Demo Video</strong>: <a href="https://www.youtube.com/watch?v=YGEWnMaVCJQ">App Walk Through</a></li>
+                  <li><strong>Deployed Site</strong>: <a href="https://binderbuddies-03bu.onrender.com/">Binder Buddies</a></li>
+                </ul>
+              </div>
+              <div className="portfolio-description">
+                <h2>Where Knowledge Meets Community</h2>
+                <p>
+                  Binder Buddies is the essential app for people seeking to enhance their learning journey. Stay motivated in your studies with a study partner. Filter potential partners by age, gender, study subject, expertise level, location, and availability. Reach out by message to coordinate times and explore interests. Create events to meet up in person or online. Find a study partner in your neighborhood or meet new partners from around the world.
+                </p>
+              </div>
+            </div>
           </div>
-
         </div>
       </section>
     </div>
