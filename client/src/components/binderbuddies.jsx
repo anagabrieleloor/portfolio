@@ -1,73 +1,79 @@
-import { Routes, Route, Link } from "react-router-dom";
-import React, { useState, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.min.css';
+import profpic from '../assets/profpic.jpg';
+import kuromi_eat from '../assets/kuromi_eat.jpg';
+import kuromihappy from '../assets/kuromihappy.jpg';
 
 export default function BinderBuddies() {
-  const [slideIndex, setSlideIndex] = useState(1);
-
-  function plusSlides(n) {
-    setSlideIndex(slideIndex + n);
-  }
-
-  function currentSlide(n) {
-    setSlideIndex(n);
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { setSlideIndex(1); }
-    if (n < 1) { setSlideIndex(slides.length); }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  }
+  const swiperRef = useRef(null);
 
   useEffect(() => {
-    showSlides(slideIndex);
-  }, [slideIndex]);
+    swiperRef.current = new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: false, // Disable loop
+      spaceBetween: 20, // Adjust space between images
+      slidesPerView: 1, // Show only one slide at a time
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+    });
 
+    swiperRef.current.on('slideChange', () => {
+      const activeIndex = swiperRef.current.activeIndex;
+      const paginationBullets = document.querySelectorAll('.swiper-pagination-bullet');
+
+      paginationBullets.forEach((bullet, index) => {
+        if (index === activeIndex) {
+          bullet.classList.add('swiper-pagination-bullet-active');
+        } else {
+          bullet.classList.remove('swiper-pagination-bullet-active');
+        }
+      });
+    });
+
+    return () => {
+      swiperRef.current.destroy();
+    };
+  }, []);
   return (
     <div>
       <section id="portfolio-details" className="portfolio-details">
         <div className="container">
           <div className="row gy-4">
             <div className="col-lg-8">
-              {/* Slideshow container */}
-              <div className="slideshow-container">
-                {/* Full-width images with number and caption text */}
-                <div className="mySlides fade">
-                  <div className="numbertext">1 / 3</div>
-                  <img src="https://i.ibb.co/hV56nfW/Screenshot-2024-03-12-114933.png" style={{ width: '100%' }} alt="User Dashboard" />
-                  <div className="text">User Dashboard</div>
+              <div class="portfolio-details-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                <div class="swiper-wrapper align-items-center" id="swiper-wrapper-62b9d38db747da16" aria-live="off" style={{ transform: 'translate3d(-3104px, 0px, 0px)', transitionDuration: '0ms' }}>
+                  <div class="swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1 / 3" style={{ width: '776px' }}>
+                    <img src={profpic} alt="" />
+                  </div>
+                  <div class="swiper-slide" data-swiper-slide-index="1" role="group" aria-label="2 / 3" style={{ width: '776px' }}>
+                    <img src={kuromi_eat} alt="" />
+                  </div>
+                  <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 3" style={{ width: '776px' }}>
+                    <img src={kuromihappy} alt="" />
+                  </div>
                 </div>
-                <div className="mySlides fade">
-                  <div className="numbertext">2 / 3</div>
-                  <img src="https://i.ibb.co/W0sTJ4j/buddyprof.png" style={{ width: '100%' }} alt="Buddy Profile" />
-                  <div className="text">Buddy Profile</div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                  <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span>
+                  <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+                  <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
                 </div>
-                <div className="mySlides fade">
-                  <div className="numbertext">3 / 3</div>
-                  <img src="https://i.ibb.co/fGMsKP2/events.png" style={{ width: '100%' }} alt="Study Events" />
-                  <div className="text">Study Events</div>
-                </div>
-                {/* Next and previous buttons */}
-                <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
-                <a className="next" onClick={() => plusSlides(1)}>&#10095;</a>
-              </div>
-              <br />
-              {/* The dots/circles */}
-              <div style={{ textAlign: 'center' }}>
-                <span className="dot" onClick={() => currentSlide(1)}></span>
-                <span className="dot" onClick={() => currentSlide(2)}></span>
-                <span className="dot" onClick={() => currentSlide(3)}></span>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
               </div>
             </div>
+
+
+
             <div className="col-lg-4">
               <div className="portfolio-info">
                 <h3>Binder Buddies</h3>
@@ -89,5 +95,6 @@ export default function BinderBuddies() {
         </div>
       </section>
     </div>
+    
   );
 }

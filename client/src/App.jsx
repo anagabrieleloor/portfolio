@@ -7,6 +7,7 @@ import Contact from './components/contact';
 import Portfolio from './components/portfolio';
 import BinderBuddies from './components/binderbuddies';
 import About from './components/about';
+import Carousel from './components/carousel';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/binderbuddies" element={<BinderBuddies />} />
           <Route path="/about" element={<About />} />
+          <Route path="/carousel" element={<Carousel />} />
         </Route>
       </Routes>
       
