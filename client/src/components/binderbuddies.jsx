@@ -54,6 +54,7 @@ export default function BinderBuddies() {
     const paginationBullets = document.querySelectorAll('.swiper-pagination-bullet');
     paginationBullets.forEach((b) => b.classList.remove('swiper-pagination-bullet-active'));
     paginationBullets[index].classList.add('swiper-pagination-bullet-active');
+    
   };
   return (
     <div>
