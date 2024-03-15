@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react';
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.min.css';
-import dash from '../assets/binderbuddies/dash.png';
-import profile from '../assets/binderbuddies/profile.png';
-import chat from '../assets/binderbuddies/chat.png';
+import strangerbg from '../assets/strangersthings/strangerbg.png';
+import strangerpost from '../assets/strangersthings/strangerpost.png';
+import strangerpostnew from '../assets/strangersthings/strangerpostnew.png';
 
 
-export default function BinderBuddies() {
+export default function StrangersThings() {
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -64,13 +64,13 @@ export default function BinderBuddies() {
               <div class="portfolio-details-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
                 <div class="swiper-wrapper align-items-center" id="swiper-wrapper-62b9d38db747da16" aria-live="off" style={{ transform: 'translate3d(-3104px, 0px, 0px)', transitionDuration: '0ms' }}>
                   <div class="swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1 / 3" style={{ width: '776px' }}>
-                    <img src={dash} alt="" />
+                    <img src={strangerpost} alt="" />
                   </div>
                   <div class="swiper-slide" data-swiper-slide-index="1" role="group" aria-label="2 / 3" style={{ width: '776px' }}>
-                    <img src={profile} alt="" />
+                    <img src={strangerpostnew} alt="" />
                   </div>
                   <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 3" style={{ width: '776px' }}>
-                    <img src={chat} alt="" />
+                    <img src={strangerbg} alt="" />
                   </div>
                 </div>
                 <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
@@ -86,18 +86,17 @@ export default function BinderBuddies() {
 
             <div className="col-lg-4">
               <div className="portfolio-info">
-                <h3>Binder Buddies</h3>
+                <h3>Stranger's Things</h3>
                 <ul>
                   <li><strong>Tech Stack</strong>: PostgreSQL, Express.js, React, Node.js</li>
-                  <li><strong>Github Repo</strong>: <a href="https://github.com/Capstone-Project-Study-Partner-App/Study-App">Github Repo</a></li>
-                  <li><strong>Demo Video</strong>: <a href="https://www.youtube.com/watch?v=YGEWnMaVCJQ">App Walk Through</a></li>
-                  <li><strong>Deployed Site</strong>: <a href="https://binderbuddies-03bu.onrender.com/">Binder Buddies</a></li>
+                  <li><strong>Github Repo</strong>: <a href="https://github.com/anagabrieleloor/the-real-strangers-things.git">Github Repo</a></li>
+                  <li><strong>Deployed Site</strong>: <a href="https://sparkling-bavarois-92aa94.netlify.app/">Stranger's Things</a></li>
                 </ul>
               </div>
               <div className="portfolio-description">
-                <h2>Where Knowledge Meets Community</h2>
+                <h2>Where Strangers Find Strange Things</h2>
                 <p>
-                  Binder Buddies is the essential app for people seeking to enhance their learning journey. Stay motivated in your studies with a study partner. Filter potential partners by age, gender, study subject, expertise level, location, and availability. Reach out by message to coordinate times and explore interests. Create events to meet up in person or online. Find a study partner in your neighborhood or meet new partners from around the world.
+                Buy and sell anything under the sun! It's like a virtual swap meet where you can score awesome finds or declutter your space by listing your stuff. From gadgets to fashion, there's something for everyone. Dive in and see what treasures you'll uncover!
                 </p>
               </div>
             </div>

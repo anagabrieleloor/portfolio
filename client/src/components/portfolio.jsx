@@ -50,12 +50,14 @@ export default function Portfolio() {
               <div className="portfolio-wrap">
                 <img src="https://i.ibb.co/4tBYHDt/carino-home.png" className="img-fluid" alt="" />
                 <div className="portfolio-links">
+                <Link to="/carino">
                   <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox" title="Web 3">
                     <i className="bx bx-plus"></i>
                   </a>
                   <a href="portfolio-details.html" title="More Details">
                     <i className="bx bx-link"></i>
                   </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -64,12 +66,14 @@ export default function Portfolio() {
               <div className="portfolio-wrap">
                 <img src="https://i.ibb.co/ftPXfvM/Screenshot-2024-03-08-134239.png" className="img-fluid" alt="" />
                 <div className="portfolio-links">
+                <Link to="/strangersthings">
                   <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 2">
                     <i className="bx bx-plus"></i>
                   </a>
                   <a href="portfolio-details.html" title="More Details">
                     <i className="bx bx-link"></i>
                   </a>
+                  </Link>
                 </div>
               </div>
             </div>

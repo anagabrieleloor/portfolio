@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react';
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.min.css';
-import dash from '../assets/binderbuddies/dash.png';
-import profile from '../assets/binderbuddies/profile.png';
-import chat from '../assets/binderbuddies/chat.png';
+import matches from '../assets/carino/matches.png';
+import prof from '../assets/carino/prof.png';
+import chat from '../assets/carino/chat.png';
 
 
-export default function BinderBuddies() {
+export default function Carino() {
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -64,10 +64,10 @@ export default function BinderBuddies() {
               <div class="portfolio-details-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
                 <div class="swiper-wrapper align-items-center" id="swiper-wrapper-62b9d38db747da16" aria-live="off" style={{ transform: 'translate3d(-3104px, 0px, 0px)', transitionDuration: '0ms' }}>
                   <div class="swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1 / 3" style={{ width: '776px' }}>
-                    <img src={dash} alt="" />
+                    <img src={prof} alt="" />
                   </div>
                   <div class="swiper-slide" data-swiper-slide-index="1" role="group" aria-label="2 / 3" style={{ width: '776px' }}>
-                    <img src={profile} alt="" />
+                    <img src={matches} alt="" />
                   </div>
                   <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 3" style={{ width: '776px' }}>
                     <img src={chat} alt="" />
@@ -86,18 +86,19 @@ export default function BinderBuddies() {
 
             <div className="col-lg-4">
               <div className="portfolio-info">
-                <h3>Binder Buddies</h3>
+                <h3>Cariño</h3>
                 <ul>
                   <li><strong>Tech Stack</strong>: PostgreSQL, Express.js, React, Node.js</li>
-                  <li><strong>Github Repo</strong>: <a href="https://github.com/Capstone-Project-Study-Partner-App/Study-App">Github Repo</a></li>
-                  <li><strong>Demo Video</strong>: <a href="https://www.youtube.com/watch?v=YGEWnMaVCJQ">App Walk Through</a></li>
-                  <li><strong>Deployed Site</strong>: <a href="https://binderbuddies-03bu.onrender.com/">Binder Buddies</a></li>
+                  <li><strong>Github Repo</strong>: <a href="https://github.com/anagabrieleloor/carino.git">Github Repo</a></li>
+                  <li><strong>Deployed Site</strong>: <a href="https://carino-iuhv.onrender.com/">Cariño</a></li>
                 </ul>
               </div>
               <div className="portfolio-description">
-                <h2>Where Knowledge Meets Community</h2>
+                <h2>Translation of cariño – Spanish-English dictionary</h2>
                 <p>
-                  Binder Buddies is the essential app for people seeking to enhance their learning journey. Stay motivated in your studies with a study partner. Filter potential partners by age, gender, study subject, expertise level, location, and availability. Reach out by message to coordinate times and explore interests. Create events to meet up in person or online. Find a study partner in your neighborhood or meet new partners from around the world.
+                honey [noun] (especially American) darling (used when speaking to someone one loves). sweetheart [noun] used as an endearment for any beloved person, eg a child. babe [noun] a way of addressing someone you love, such as a husband or wife.
+
+                Swipe, match, and message your honey.
                 </p>
               </div>
             </div>
