@@ -145,9 +145,8 @@ export default function Navbar() {
             <img src={profpic} alt="" className="img-fluid rounded-circle" />
             <h1 className="text-light"><a href="index.html">Anagabriele Loor</a></h1>
             <div className="social-links mt-3 text-center">
-            <a href="#" className="twitter"><FontAwesomeIcon icon={faTwitter} /></a>
-  <a href="#" className="facebook"><FontAwesomeIcon icon={faFacebook} /></a>
-  <a href="#" className="instagram"><FontAwesomeIcon icon={faEnvelope} /></a>
+
+  <a href="#" className="email"><FontAwesomeIcon icon={faEnvelope} /></a>
   <a href="https://github.com/anagabrieleloor" className="github"><FontAwesomeIcon icon={faGithub} /></a>
   <a href="https://www.linkedin.com/in/anagabrieleloor/" className="linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
             </div>
