@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import profpic from '../assets/profpic.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebook, faInstagram, faSkype, faLinkedin, faGithub  } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faHouse, faAddressCard, faCircleUser, faFolderOpen } from '@fortawesome/free-solid-svg-icons';
-
-
+import { faEnvelope, faHouse, faAddressCard, faCircleUser, faFolderOpen, faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   useEffect(() => {
@@ -97,10 +95,11 @@ export default function Navbar() {
      * Mobile nav toggle
      */
     on('click', '.mobile-nav-toggle', function (e) {
-      select('body').classList.toggle('mobile-nav-active')
-      this.classList.toggle('bi-list')
-      this.classList.toggle('bi-x')
-    })
+      select('body').classList.toggle('mobile-nav-active');
+      // Toggle the icon classes
+      this.querySelector('svg').classList.toggle('fa-bars');
+      this.querySelector('svg').classList.toggle('fa-times');
+    });
 
     /**
      * Scrool with ofset on links with a class name .scrollto
@@ -113,8 +112,8 @@ export default function Navbar() {
         if (body.classList.contains('mobile-nav-active')) {
           body.classList.remove('mobile-nav-active')
           let navbarToggle = select('.mobile-nav-toggle')
-          navbarToggle.classList.toggle('bi-list')
-          navbarToggle.classList.toggle('bi-x')
+          navbarToggle.querySelector('svg').classList.toggle('fa-bars');
+          navbarToggle.querySelector('svg').classList.toggle('fa-times');
         }
         scrollto(this.hash)
       }
@@ -140,24 +139,64 @@ export default function Navbar() {
   return (
     <div id="navbar">
       <header id="header">
+        <i className="bi bi-list mobile-nav-toggle d-xl-none">
+          <FontAwesomeIcon icon={faBars} />
+        </i>
+        
         <div className="d-flex flex-column">
           <div className="profile">
             <img src={profpic} alt="" className="img-fluid rounded-circle" />
-            <h1 className="text-light"><a href="index.html">Anagabriele Loor</a></h1>
+            <h1 className="text-light">
+              <a href="index.html">Anagabriele Loor</a>
+            </h1>
             <div className="social-links mt-3 text-center">
-
-  <a href="#" className="email"><FontAwesomeIcon icon={faEnvelope} /></a>
-  <a href="https://github.com/anagabrieleloor" className="github"><FontAwesomeIcon icon={faGithub} /></a>
-  <a href="https://www.linkedin.com/in/anagabrieleloor/" className="linkedin"><FontAwesomeIcon icon={faLinkedin} /></a>
+              <a href="https://github.com/anagabrieleloor" className="github" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              <a href="https://www.linkedin.com/in/anagabrieleloor/" className="linkedin" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
             </div>
           </div>
 
           <nav id="navbar" className="nav-menu navbar">
             <ul>
-              <li><Link to="/"><a href="#hero" className="nav-link scrollto active"><i className="bx bx-home"></i><FontAwesomeIcon icon={faHouse} /><span>Home</span></a></Link></li>
-              <li><Link to="/about"><a href="#about" className="nav-link scrollto"><i className="bx bx-user"></i><FontAwesomeIcon icon={faCircleUser} /> <span>About</span></a></Link></li>
-              <li><Link to="/portfolio"><a href="#portfolio" className="nav-link scrollto"><i className="bx bx-book-content"></i><FontAwesomeIcon icon={faFolderOpen} /> <span>Portfolio</span></a></Link></li>
-              <li><Link to="/contact"><a href="#contact" className="nav-link scrollto"><i className="bx bx-envelope"></i><FontAwesomeIcon icon={faAddressCard} /> <span>Contact</span></a></Link></li>
+              <li>
+                <Link to="/">
+                  <a href="#hero" className="nav-link scrollto active">
+                    <i className="bx bx-home"></i>
+                    <FontAwesomeIcon icon={faHouse} />
+                    <span>Home</span>
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about">
+                  <a href="#about" className="nav-link scrollto">
+                    <i className="bx bx-user"></i>
+                    <FontAwesomeIcon icon={faCircleUser} />
+                    <span>About</span>
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/portfolio">
+                  <a href="#portfolio" className="nav-link scrollto">
+                    <i className="bx bx-book-content"></i>
+                    <FontAwesomeIcon icon={faFolderOpen} />
+                    <span>Portfolio</span>
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact">
+                  <a href="#contact" className="nav-link scrollto">
+                    <i className="bx bx-envelope"></i>
+                    <FontAwesomeIcon icon={faAddressCard} />
+                    <span>Contact</span>
+                  </a>
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

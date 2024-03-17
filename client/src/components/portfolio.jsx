@@ -1,7 +1,11 @@
 import {Routes, Route, Link} from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BinderBuddies from "./binderbuddies";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquarePlus } from '@fortawesome/free-solid-svg-icons'
+import thumbnail from '../assets/carino/thumbnail.png';
+import bbsize from '../assets/binderbuddies/bbsize.png';
+import bukubuku from '../assets/strangersthings/bukubuku.jpg';
 
 export default function Portfolio() {
 
@@ -30,32 +34,24 @@ export default function Portfolio() {
           <div className="row portfolio-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
             <div className="col-lg-4 col-md-6 portfolio-item filter-app">
               <div className="portfolio-wrap">
-                <img src="https://i.ibb.co/bJwT9L2/bb-home.png" className="img-fluid" alt="Binder Buddies" />
+                <img src={ bbsize } className="img-fluid" alt="Binder Buddies" style={{height: '300px'}} />
                 <div className="portfolio-links">
                 <Link to="/binderbuddies">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 1">
-                    <i className="bx bx-plus"></i>
-                  </a>
-                  
                   <a href="portfolio-details.html" title="More Details">
-                    <i className="bx bx-link"></i>
+                    <i className="bx bx-link"><FontAwesomeIcon icon={faSquarePlus} /></i>
                   </a>
                   </Link>
                 </div>
               </div>
             </div>
 
-            {/* Add more portfolio items with the same structure */}
             <div className="col-lg-4 col-md-6 portfolio-item filter-web">
               <div className="portfolio-wrap">
-                <img src="https://i.ibb.co/4tBYHDt/carino-home.png" className="img-fluid" alt="" />
+                <img src={ thumbnail } className="img-fluid" alt="Cariño" />
                 <div className="portfolio-links">
                 <Link to="/carino">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox" title="Web 3">
-                    <i className="bx bx-plus"></i>
-                  </a>
                   <a href="portfolio-details.html" title="More Details">
-                    <i className="bx bx-link"></i>
+                    <i className="bx bx-link"><FontAwesomeIcon icon={faSquarePlus} /></i>
                   </a>
                   </Link>
                 </div>
@@ -64,14 +60,11 @@ export default function Portfolio() {
 
             <div className="col-lg-4 col-md-6 portfolio-item filter-app">
               <div className="portfolio-wrap">
-                <img src="https://i.ibb.co/ftPXfvM/Screenshot-2024-03-08-134239.png" className="img-fluid" alt="" />
+                <img src={ bukubuku } className="img-fluid" alt="Stranger's Things" style={{height: '300px'}}/>
                 <div className="portfolio-links">
                 <Link to="/strangersthings">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 2">
-                    <i className="bx bx-plus"></i>
-                  </a>
                   <a href="portfolio-details.html" title="More Details">
-                    <i className="bx bx-link"></i>
+                    <i className="bx bx-link"><FontAwesomeIcon icon={faSquarePlus} /></i>
                   </a>
                   </Link>
                 </div>
