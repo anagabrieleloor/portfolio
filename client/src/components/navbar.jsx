@@ -96,9 +96,8 @@ export default function Navbar() {
      */
     on('click', '.mobile-nav-toggle', function (e) {
       select('body').classList.toggle('mobile-nav-active');
-      // Toggle the icon classes
-      this.querySelector('svg').classList.toggle('fa-bars');
-      this.querySelector('svg').classList.toggle('fa-times');
+      // Toggle the icon classes on the toggle button itself
+      this.classList.toggle('active');
     });
 
     /**
